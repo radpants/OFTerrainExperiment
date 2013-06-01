@@ -21,6 +21,7 @@ class testApp : public ofBaseApp{
     void gotMessage(ofMessage msg);
     
     ofTexture renderTexture;
-    ofVbo terrainVbo;
+    ofVboMesh terrainVbo;
+    ofCamera camera;
     	
 };
