@@ -1,6 +1,10 @@
 #pragma once
 
 #include "ofMain.h"
+#include "TerrainPatch.h"
+
+#define PATCHES_WIDTH 8
+#define PATCHES_HEIGHT 4
 
 class testApp : public ofBaseApp{
 
@@ -20,8 +24,10 @@ class testApp : public ofBaseApp{
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
     
-    ofTexture renderTexture;
-    ofVboMesh terrainVbo;
+    ofVec2f previousMousePosition;
+    ofLight light;
     ofCamera camera;
+    
+    TerrainPatch terrainPatches[PATCHES_WIDTH*PATCHES_HEIGHT];
     	
 };
